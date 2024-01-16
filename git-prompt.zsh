@@ -203,6 +203,10 @@ function _zsh_git_prompt_git_status() {
                     prompt_element(UPSTREAM_PREFIX, upstream, UPSTREAM_SUFFIX);
                 }
 
+                if (behind < 0 || ahead > 0) {
+                    prompt_element(SEPARATOR);
+                }
+
                 if (behind < 0) {
                     prompt_element(BEHIND, behind * -1);
                 }
