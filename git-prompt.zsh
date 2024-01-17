@@ -237,7 +237,7 @@ function _zsh_git_prompt_git_status() {
                     prompt_element(STASHED, stashed);
                 }
 
-                if (unmerged == 0 && staged == 0 && unstaged == 0 && untracked == 0) {
+                if (unmerged == 0 && staged == 0 && unstaged == 0 && untracked == 0 && stashed == 0) {
                     prompt_element(CLEAN);
                 }
 
