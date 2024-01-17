@@ -113,7 +113,7 @@ function _zsh_git_prompt_git_status() {
         -v STASHED="$ZSH_THEME_GIT_PROMPT_STASHED" \
         -v SHOW_STASH="$ZSH_GIT_PROMPT_SHOW_STASH" \
         -v CLEAN="$ZSH_THEME_GIT_PROMPT_CLEAN" \
-        -v RC="%{$reset_color%}" \
+        -v RC="%{$reset_color%}%b%f%k" \
         '
             BEGIN {
                 ORS = "";
@@ -257,7 +257,7 @@ function _zsh_git_prompt_git_status_secondary() {
     echo "$tags" | $ZSH_GIT_PROMPT_AWK_CMD \
         -v SEPARATOR="$ZSH_THEME_GIT_PROMPT_TAGS_SEPARATOR" \
         -v TAG="$ZSH_THEME_GIT_PROMPT_TAG" \
-        -v RC="%{$reset_color%}" \
+        -v RC="%{$reset_color%}%b%f%k" \
         '
             BEGIN {
                 ORS = "";
